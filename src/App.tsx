@@ -1,11 +1,18 @@
 import React from "react"
+import { Routes, Route, Link } from "react-router-dom";
 
-class App extends React.Component{
-    render(){
-        return (
-            <div>hello react ts</div>
-        )
-    }
+import Home from './pages/home/home'
+import Index from './pages/index'
+
+function App() {
+
+    return (
+        <div>
+            <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/home" element={<Home />} />
+            </Routes>
+        </div>
+    )
 }
-
 export default App
